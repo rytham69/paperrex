@@ -29,8 +29,10 @@ nav{
     z-index: 2;
 }
 
-.logo a{
-    font-weight: 600;
+.logo img{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
 
 }
 .menu-toggle{
@@ -183,5 +185,10 @@ nav{
     }
     .link a:hover::after,.social a:hover::after{
         display: none;
+    }
+    .logo img{
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
     }
  }

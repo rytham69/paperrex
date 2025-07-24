@@ -206,7 +206,7 @@ const Nav = ({ containerRef }) => {
     <>
       <nav className='navbar'>
         <div className="logo">
-          <NavLink>PaperRex</NavLink>
+          <img src="/homeimgs/prxlogo.png" alt="" />
         </div>
         <div ref={menuToggle} onClick={menuToggleEvent} className="menu-toggle">
           <p ref={open} id="menu-open">Menu</p>
