@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
  import RosterDetail from '../roster/RosterDetail'
- import Home from '../pages/Home.Jsx'
+ import Home from '../pages/Home.jsx'
  import Roster from '../pages/Roster.jsx'
  import Signup from '../pages/Signup.jsx'
  import Login from '../pages/Login.jsx'
