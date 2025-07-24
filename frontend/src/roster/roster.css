@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dongle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: top;
+}
+.team{
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+    background-color: #0f0f0f;
+    color: #e3ecdb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    gap: 2.5em;
+    overflow: hidden;
+}
+
+.profile-images{
+    width: max-content;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.img{
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    cursor:pointer;
+    will-change: width,height;
+    border-radius: 0.5rem;
+}
+
+.profile-name{
+    width: 100%;
+    height: 20rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    overflow: hidden;
+}
+
+.name h1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed";
+    font-size: 20rem;
+    font-weight: 900;
+    letter-spacing:-0.5rem;
+    line-height: 1;
+    color: #ff0099;
+    user-select: none;
+    transform: translateY(100%);
+}
+
+.name.default h1{
+    color: #e3ecdb;
+    transform: translateY(-100%);
+    will-change: transform;
+}
+
+@media (max-width : 1400px) {
+    .profile-images{
+        flex-wrap: nowrap;
+        max-width: 90%;
+        justify-content: center;
+    }
+    .img{
+        width: 60px;
+        height: 60px;
+        padding: 2.5px;
+    }
+    .name h1{
+        font-size: 15rem;
+        letter-spacing: 0;
+    }
+    .profile-name{
+        height: 15rem;
+    }
+}
+
+@media (max-width : 900px) {
+    section{
+        flex-direction: column-reverse;
+
+    }
+    .profile-images{
+        flex-wrap: nowrap;
+        max-width: 90%;
+        justify-content: center;
+    }
+    .img{
+        width: 60px;
+        height: 60px;
+        padding: 2.5px;
+    }
+    .name h1{
+        font-size: 4rem;
+        letter-spacing: 0;
+    }
+    .profile-name{
+        height: 4rem;
+    }
+
+}

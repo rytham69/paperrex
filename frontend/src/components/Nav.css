@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dongle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body{
+    font-family: "Barlow Condensed";
+    overflow-x: hidden;
+}
+
+.navbar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar a,.navbar p{
+    position: relative;
+    text-decoration: none;
+    color: #e3ecdb;
+    font-size: 1rem;
+    font-weight: 300;
+    user-select: none;
+}
+nav{
+    position: fixed;
+    width: 100vw;
+    padding: 2.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo a{
+    font-weight: 600;
+
+}
+.menu-toggle{
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+.menu-toggle p{
+    position: absolute;
+    transform-origin: top left;
+    will-change: transform,opacity;
+}
+.menu-overlay{
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100svh;
+    background-color: #141314;
+    z-index: 1;
+}
+.menu-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform-origin: left bottom;
+    will-change: transform,opacity;
+}
+.menu-items,.menu-footer{
+    width: 100%;
+    padding: 2.5em;
+    display: flex;
+    gap: 2.5em;
+}
+.col-lg{
+    flex:3;
+
+}
+.col-sm{
+    flex:2;
+}
+.menu-items .col-lg{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+.menu-preview-img{
+    position: relative;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu-preview-img img{
+    position: absolute;
+    will-change: transform,opacity;
+
+}
+
+.menu-items .col-sm{
+    padding: 2.5em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.menu-links,.menu-socials{
+    display:flex ;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.link,.social{
+    padding-bottom: 6px;
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+.link a.active {
+  color: #ff0099;
+}
+
+.link a{
+    color: #e3ecdb;
+}
+
+.link a,.social a{
+    display: inline-block;
+    will-change: transform;
+    transition: color 0.5s;
+}
+
+.link a{
+    font-size: 3.5rem;
+    letter-spacing: -0.02rem;
+}
+.social a{
+    color: #8f8f8f;
+}
+.social a:hover{
+    color: #e3ecdb;
+
+}
+.menu-footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.link a::after,.social a::after{
+    position: absolute;
+    content: "";
+    top: 102.5%;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background: #e3ecdb;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.6,0,0.4,1);
+}
+
+.link a:hover::after,.social a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+
+.menu-toggle p#menu-close{
+    opacity: 0;
+    transform: translateX(-5px),translateY(10px) rotate(5deg);
+}
+
+.link a, .social a{
+    transform: translateY(120%);
+    opacity: 0.25;
+}
+
+.menu-content{
+    transform: translateX(-100px) translateY(-100px) scale(1.5) rotate(-15deg);
+    opacity: 0.25;
+}
+.menu-overlay{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+ @media (max-width:900px){
+    .menu-items .col-lg{
+        display: none;
+    }
+    .link a:hover::after,.social a:hover::after{
+        display: none;
+    }
+ }

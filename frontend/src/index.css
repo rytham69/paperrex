@@ -1,0 +1,20 @@
+@import "tailwindcss";
+:root{
+   --text-pri-col:#e3ecdb;
+   --text-sec-col: #ff0099;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-family: "Barlow Condensed";
+  background: #0f0f0f;
+}
